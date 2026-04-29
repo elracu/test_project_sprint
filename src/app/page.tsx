@@ -16,7 +16,13 @@ const alienPixels = [
 
 function SpaceInvader() {
   return (
-    <div style={{ position: 'absolute', top: 16, right: 16, imageRendering: 'pixelated' }}>
+    <div
+      style={{
+        position: 'absolute',
+        top: 16,
+        animation: 'march 8s linear infinite',
+      }}
+    >
       {alienPixels.map((row, r) => (
         <div key={r} style={{ display: 'flex' }}>
           {row.map((px, c) => (
@@ -38,11 +44,11 @@ function SpaceInvader() {
 
 export default function Home() {
   return (
-    <div className="relative flex h-screen items-center justify-center bg-pink-200">
+    <div className="relative flex h-screen items-center justify-center bg-black overflow-hidden">
       <SpaceInvader />
       <div className="flex flex-col items-center gap-2">
-        <h1 className="text-5xl font-bold text-white">Raul Marquez</h1>
-        <p className="text-2xl text-white">elracu</p>
+        <h1 className="text-5xl font-bold" style={{ color: FUCHSIA }}>Raul Marquez</h1>
+        <p className="text-2xl" style={{ color: FUCHSIA }}>elracu</p>
       </div>
     </div>
   );
