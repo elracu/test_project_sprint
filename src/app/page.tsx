@@ -1020,6 +1020,125 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* ─── Contact / Footer ─── */}
+      <footer id="contact" className="bg-black px-4 pt-12 md:px-8 md:pt-[48px]">
+
+        {/* ── Mobile ── */}
+        <div className="flex flex-col gap-12 md:hidden">
+
+          {/* CTA block */}
+          <div className="flex flex-col gap-6">
+            <p className="font-light italic text-white uppercase" style={{ fontSize: "24px", lineHeight: 1.1, letterSpacing: "-0.96px" }}>
+              Have a <strong className="font-bold not-italic">project</strong> in mind?
+            </p>
+            <button className="self-start border border-white text-white px-4 py-3 rounded-3xl font-medium text-sm tracking-[-0.04em]">
+              Let&apos;s talk
+            </button>
+          </div>
+
+          {/* Social links */}
+          <div className="flex flex-col gap-4">
+            {["Facebook", "Instagram", "X.com", "Linkedin"].map((link) => (
+              <a key={link} href="#" className="font-normal text-white uppercase" style={{ fontSize: "18px", lineHeight: 1.1, letterSpacing: "-0.72px" }}>
+                {link}
+              </a>
+            ))}
+          </div>
+
+          {/* Divider */}
+          <div className="w-full h-px bg-white" />
+
+          {/* Bottom: legal + coded by + giant H.Studio */}
+          <div className="flex flex-col items-center gap-4 overflow-hidden" style={{ height: "150px" }}>
+            <div className="flex gap-8 justify-center">
+              <a href="#" className="font-normal text-white uppercase underline" style={{ fontSize: "12px", lineHeight: 1.1, letterSpacing: "-0.48px" }}>Licences</a>
+              <a href="#" className="font-normal text-white uppercase underline" style={{ fontSize: "12px", lineHeight: 1.1, letterSpacing: "-0.48px" }}>Privacy policy</a>
+            </div>
+            <p className="font-mono font-normal text-white uppercase" style={{ fontSize: "10px", lineHeight: 1.1 }}>
+              [ Coded By Claude ]
+            </p>
+            <p
+              className="font-semibold text-white whitespace-nowrap"
+              style={{ fontSize: "91.425px", lineHeight: 0.8, letterSpacing: "-5.49px" }}
+            >
+              H.Studio
+            </p>
+          </div>
+
+        </div>
+
+        {/* ── Desktop ── */}
+        <div className="hidden md:flex flex-col gap-[120px]">
+
+          {/* Top row: CTA | socials-center | socials-right + rule */}
+          <div className="flex flex-col gap-[48px]">
+            <div className="flex justify-between items-start">
+              {/* Left: CTA */}
+              <div className="flex flex-col gap-6" style={{ width: "298px" }}>
+                <p className="font-light italic text-white uppercase" style={{ fontSize: "24px", lineHeight: 1.1, letterSpacing: "-0.96px" }}>
+                  Have a <strong className="font-bold not-italic">project</strong> in mind?
+                </p>
+                <button className="self-start border border-white text-white px-4 py-3 rounded-3xl font-medium text-sm tracking-[-0.04em]">
+                  Let&apos;s talk
+                </button>
+              </div>
+
+              {/* Center: Facebook + Instagram */}
+              <div className="flex flex-col items-center gap-4" style={{ width: "298px" }}>
+                {["Facebook", "Instagram"].map((link) => (
+                  <a key={link} href="#" className="font-normal text-white uppercase text-center" style={{ fontSize: "18px", lineHeight: 1.1, letterSpacing: "-0.72px" }}>
+                    {link}
+                  </a>
+                ))}
+              </div>
+
+              {/* Right: X.com + Linkedin */}
+              <div className="flex flex-col items-end gap-4" style={{ width: "298px" }}>
+                {["X.com", "Linkedin"].map((link) => (
+                  <a key={link} href="#" className="font-normal text-white uppercase text-right" style={{ fontSize: "18px", lineHeight: 1.1, letterSpacing: "-0.72px" }}>
+                    {link}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="w-full h-px bg-white" />
+          </div>
+
+          {/* Bottom row: giant H.Studio + legal links */}
+          <div className="flex items-end justify-between">
+
+            {/* Left: vertical label + giant text */}
+            <div className="flex items-end gap-4 flex-1 min-w-0 overflow-hidden">
+              {/* [ Coded By Claude ] rotated */}
+              <div className="flex items-center justify-center shrink-0" style={{ width: "15px", height: "160px" }}>
+                <p
+                  className="font-mono font-normal text-white uppercase whitespace-nowrap"
+                  style={{ fontSize: "10px", lineHeight: 1.1, transform: "rotate(-90deg)" }}
+                >
+                  [ Coded By Claude ]
+                </p>
+              </div>
+              {/* Giant H.Studio */}
+              <p
+                className="font-semibold text-white whitespace-nowrap"
+                style={{ fontSize: "20.14vw", lineHeight: 0.8, letterSpacing: "-0.06em" }}
+              >
+                H.Studio
+              </p>
+            </div>
+
+            {/* Right: legal links */}
+            <div className="flex flex-row items-end gap-8 pb-8 shrink-0">
+              <a href="#" className="font-normal text-white uppercase underline" style={{ fontSize: "12px", lineHeight: 1.1, letterSpacing: "-0.48px" }}>Licences</a>
+              <a href="#" className="font-normal text-white uppercase underline" style={{ fontSize: "12px", lineHeight: 1.1, letterSpacing: "-0.48px" }}>Privacy policy</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </footer>
     </main>
   );
 }
